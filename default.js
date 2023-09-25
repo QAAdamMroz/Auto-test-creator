@@ -4,4 +4,4 @@ const DEFAULT_RESPONSE = {
   data: []
 }
 
-export { DEFAULT_RESPONSE };
+export {DEFAULT_RESPONSE};
