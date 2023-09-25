@@ -1,0 +1,17 @@
+import fs from "fs/promises";
+import { writeAndRead } from "./util";
+import { DEFAULT_RESPONSE } from "./default.js";
+
+const input = await fs
+.readFile("data.json", "utf8")
+.catch(async ({ message }) => {
+  if (!message.includes("no such file or directory")) throw(error);
+
+  return await writeAndRead({
+    type: "file",
+    name: "data.json",
+    data: JSON.stringify(DEFAULT_RESPONSE, null, 2),
+    messageCreation: "\n  Looks like you don't have \"data.json\" in your directory.\n\n  Therefore, we generated one for you with example response body. \n  You can now paste a valid response body from a request to generate tests for that particular input.",
+    messageSuccess: null
+  })
+});
