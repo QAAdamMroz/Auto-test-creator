@@ -1,0 +1,15 @@
+{
+  "name": "auto-test-generator",
+  "version": "1.0.0",
+  "description": "Complex suite of Postman generators",
+  "main": "test-gen.js",
+  "type": "module",
+  "scripts": {
+    "test-gen": "node test-gen.js"
+  },
+  "author": "Adam",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
+}
