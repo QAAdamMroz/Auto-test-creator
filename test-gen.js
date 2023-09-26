@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { writeAndRead } from "./util";
+import { writeAndRead } from "./util.js";
 import { DEFAULT_RESPONSE } from "./default.js";
 
 const input = await fs
